@@ -1,13 +1,14 @@
 recipe: default.v1
 language: vi
 pipeline:
-- name: CompactLLMCommandGenerator
-  llm:
-    model_group: rasa_command_generation_model
-  flow_retrieval:
-    active: false
+  - name: CompactLLMCommandGenerator
+    llm:
+      model_group: rasa_command_generation_model
+    flow_retrieval:
+      active: false
 
 policies:
-- name: FlowPolicy
+  - name: FlowPolicy
+  - name: RulePolicy
 #  - name: EnterpriseSearchPolicy
 assistant_id: 20251003-112410-hard-bright

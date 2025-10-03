@@ -1,0 +1,6 @@
+version: "3.1"
+
+responses:
+  utter_linh_vuc:
+    - text: |
+        Khoa có thể phục vụ các lĩnh vực: đào tạo cử nhân/ thạc sĩ, tư vấn chuyên môn, dịch vụ khảo sát/ phân tích, chuyển giao công nghệ.

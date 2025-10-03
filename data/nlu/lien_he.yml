@@ -1,0 +1,8 @@
+version: "3.1"
+
+nlu:
+  - intent: ask_lien_he
+    examples: |
+      - làm sao liên hệ với khoa?
+      - email của khoa là gì
+      - số điện thoại khoa

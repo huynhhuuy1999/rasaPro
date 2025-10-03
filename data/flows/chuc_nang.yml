@@ -1,0 +1,6 @@
+flows:
+  list_chuc_nang:
+    description: Liệt kê các chức năng của khoa
+    name: list chuc nang
+    steps:
+      - action: utter_list_chuc_nang

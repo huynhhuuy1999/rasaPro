@@ -1,0 +1,8 @@
+version: "3.1"
+responses:
+  utter_lien_he:
+    - text: |
+        Bạn có thể liên hệ với văn phòng khoa qua:
+        - Email: khoa@example.edu.vn
+        - Điện thoại: (024) 1234 5678
+        - Địa chỉ: Tầng 2, Nhà A, Trường Đại học XYZ

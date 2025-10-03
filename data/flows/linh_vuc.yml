@@ -1,0 +1,6 @@
+flows:
+  linh_vuc:
+    description: Liệt kê các lĩnh vực của khoa
+    name: linh vuc
+    steps:
+      - action: utter_linh_vuc

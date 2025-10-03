@@ -1,0 +1,9 @@
+version: "3.1"
+
+responses:
+  utter_list_chuc_nang:
+    - text: |
+        Chức năng chính của khoa gồm:
+        1. Tổ chức và thực hiện chương trình đào tạo theo quy định của trường và ngành.
+        2. Nghiên cứu khoa học và chuyển giao công nghệ trong lĩnh vực chuyên môn...
+        Bạn có muốn xem chi tiết không?

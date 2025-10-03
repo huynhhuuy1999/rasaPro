@@ -1,0 +1,6 @@
+flows:
+  lien_he:
+    description: Liệt kê các thông tin liên hệ khoa
+    name: lien he
+    steps:
+      - action: utter_lien_he
