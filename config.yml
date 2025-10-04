@@ -9,6 +9,6 @@ pipeline:
 
 policies:
   - name: FlowPolicy
-  - name: RulePolicy
+  # - name: RulePolicy
 #  - name: EnterpriseSearchPolicy
 assistant_id: 20251003-112410-hard-bright

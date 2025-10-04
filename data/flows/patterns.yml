@@ -1,0 +1,26 @@
+flows:
+  pattern_chitchat:
+    description: Conversation repair flow for off-topic interactions that won't disrupt the main conversation. should not respond to greetings or anything else for which there is a flow defined
+    name: pattern chitchat
+    steps:
+      - action: utter_free_chitchat_response
+  # pattern_search:
+  #   description: Flow for handling knowledge-based questions
+  #   name: pattern search
+  #   steps:
+  #     - action: utter_free_chitchat_response
+
+  pattern_correction:
+    description: Confirm a previous correction of a slot value
+    steps:
+      - collect: confirm_slot_correction
+        description: khi người dùng xác nhận sửa giá trị
+        next:
+          - if: not slots.confirm_slot_correction
+            then:
+              - action: utter_not_corrected_previous_input
+                next: END
+          - else:
+              - action: action_correct_flow_slot
+              - action: utter_corrected_previous_input
+                next: END
