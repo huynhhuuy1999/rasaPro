@@ -1,0 +1,11 @@
+Cách chạy nhanh (local):
+
+1. Install uv: curl -LsSf https://astral.sh/uv/install.sh | sh
+2. Tạo venv: uv venv --python 3.11
+3. Tạo dependencies: source .venv/bin/activate
+4. Install rasa: uv pip install rasa-pro
+5. License rasa: export RASA_LICENSE=YOUR_LICENSE_KEY (đăng ký tại web)
+6. Chạy action server: rasa run actions
+7. Huấn luyện model: rasa train
+8. Chạy Rasa server: rasa shell (hoặc rasa run)
+9. Muốn test luồng : rasa inspect
