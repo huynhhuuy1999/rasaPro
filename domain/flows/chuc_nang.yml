@@ -1,5 +1,11 @@
 version: "3.1"
 
+slots:
+  confirm_slot_detail_chuc_nang:
+    type: bool
+    mappings:
+      - type: from_llm
+
 responses:
   utter_list_chuc_nang:
     - text: |
@@ -7,3 +13,19 @@ responses:
         1. Tổ chức và thực hiện chương trình đào tạo theo quy định của trường và ngành.
         2. Nghiên cứu khoa học và chuyển giao công nghệ trong lĩnh vực chuyên môn...
         Bạn có muốn xem chi tiết không?
+  utter_chi_tiet_chuc_nang:
+    - text: |
+        Chi tiết chức năng của khoa bao gồm:
+        Đây là chi tiết chức năng của khoa...
+  utter_thank_you:
+    - text: "Cảm ơn bạn đã quan tâm!"
+  utter_ask_confirm_slot_detail_chuc_nang:
+    - text: "Bạn có muốn biết chi tiết chức năng không?"
+      buttons:
+        - payload: /SetSlots(confirm_slot_detail_chuc_nang=true)
+          title: "Có"
+        - payload: /SetSlots(confirm_slot_detail_chuc_nang=false)
+          title: "Không, cảm ơn"
+      metadata:
+        rephrase: True
+        template: jinja

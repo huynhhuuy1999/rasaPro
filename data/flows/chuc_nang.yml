@@ -4,3 +4,13 @@ flows:
     name: list chuc nang
     steps:
       - action: utter_list_chuc_nang
+      - collect: confirm_slot_detail_chuc_nang
+        description: hỏi người dùng có muốn biết chi tiết chức năng không?
+        next:
+          - if: not slots.confirm_slot_detail_chuc_nang
+            then:
+              - action: utter_thank_you
+                next: END
+          - else:
+              - action: utter_chi_tiet_chuc_nang
+                next: END
