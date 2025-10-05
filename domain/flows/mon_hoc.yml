@@ -1,0 +1,30 @@
+version: "3.1"
+
+slots:
+  subject_name:
+    type: text
+    mappings:
+      - type: from_llm
+
+responses:
+  utter_mon_hoc:
+    - text: |
+        Khoa có các môn học sau:
+        1. Toán cao cấp
+        2. Lập trình cơ bản
+        3. Cấu trúc dữ liệu và giải thuật
+        4. Hệ điều hành
+        5. Mạng máy tính
+        6. Cơ sở dữ liệu
+        7. Phát triển phần mềm
+        8. Trí tuệ nhân tạo
+        9. An ninh mạng
+        10. Khoa học dữ liệu
+  utter_no_subject_name:
+    - text: "Xin lỗi, tôi không biết môn học nào bạn đang hỏi. Vui lòng cung cấp tên môn học cụ thể."
+  utter_chi_tiet_mon_hoc:
+    - text: |
+        Chi tiết về môn học {subject_name}:
+        Đây là chi tiết về môn học {subject_name}...
+  utter_ask_subject_name:
+    - text: "Bạn muốn biết chi tiết về môn học nào?"

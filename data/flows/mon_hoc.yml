@@ -1,0 +1,22 @@
+version: "3.1"
+
+flows:
+  mon_hoc:
+    description: Danh sách những môn học mà khoa có thể cung cấp
+    name: mon hoc
+    steps:
+      - action: utter_mon_hoc
+  chi_tiet_mon_hoc:
+    description: Chi tiết về môn học mà người dùng muốn biết
+    name: chi tiet mon hoc
+    steps:
+      - collect: subject_name
+        description: Hỏi tên môn học mà người dùng muốn biết chi tiết
+        next:
+          - if: not slots.subject_name
+            then:
+              - action: utter_no_subject_name
+                next: END
+          - else:
+              - action: utter_chi_tiet_mon_hoc
+                next: END

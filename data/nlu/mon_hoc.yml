@@ -1,0 +1,8 @@
+version: "3.1"
+
+nlu:
+  - intent: ask_mon_hoc
+    examples: |
+      - Khoa có những môn học nào?
+      - Khoa có bao nhiêu môn học?
+      - Học phần của khoa như thế nào?
